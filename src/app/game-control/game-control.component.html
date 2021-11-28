@@ -1,0 +1,20 @@
+<button   
+       class="btn btn-primary" style="margin-left:10px"
+       (click)="counterStart()">{{name}}</button>
+<button 
+      class="btn btn-primary" style="margin-left:10px" 
+      (click)="counterStop()">Stop</button>
+<button 
+      class="btn btn-primary" style="margin-left:10px" 
+      (click)="counterReset()">Reset</button>
+<button 
+class="btn btn-primary" style="margin-left:10px" 
+      (click)="counterLeap()">Leap</button>
+<br><br>
+<p  *ngFor="let arr1 of arrleap"
+    style="font-size:160%;">{{arr1}}</p>
+<p style="font-size:160%;">Timer: </p>
+<div *ngFor="let arr1 of arr">
+      <app-even *ngIf='!(arr1 %2)' [data]="arr1"></app-even>
+      <app-odd *ngIf='arr1 %2' [data1]="arr1"></app-odd>
+</div>
